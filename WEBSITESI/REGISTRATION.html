@@ -74,73 +74,97 @@
    
 <h2> REGISTRATION</h2>
 </style>
-	
-
-
- 
-
-   <body background="resim.jpg">
+	<body background="resim.jpg">
       
 
 
 
 		 
 		 </table>
-		 <div class="form">
-		 <form id="contactform" action="success.html" method="get">
-		 
-		 
-		  <form>
-            
-            <div  class="form">
+		<form>
+         </p> <label>NAME:<input type="text" name="name" id="name" required /></label></p>
+          <p> <label>SURNAME:<input type="text" name="surname" id="surname" required /></label></p>
+		
+			
+		  <p> <label>DATE OF BİRTH:<input type="date" name="date" id="date"  placeholder="dd/mm/yyyy" required /></label></p>
+       <p> <label>YOUR AGE:<input type="number" name="age" id="age"  min="10" max=40"" required /></label></p>
+                   E-MAİL:<input type="email" name="email" id="emailadresi" placeholder="explain@domain.com" required /></label></p>
+      <p>  <label>PASSWORD:<input type="text" id="password" pattern="[a-z]+[AB]+[0-9]" required /></label></p>
+		<p><label>ADRESS:<input type="text" name="address" id="address"/></label></p>
+		<button type="submit" value="Submit"img src="C:\Users\hp\Desktop\WEBSITESI\tik1.png" width="400px">SUBMIT</button></p>
+			<p>	<button type="reset" value="Reset!"> RESET</button>  </p>
+			<p> <label> GENDER:<select class="select-style gender"  id ="gender" name="gender"/></p>
 
-            <form id="contactform" action="success.html" method="get"  >
-
-                <p class="contact"><label for="name">Name</label></p>
-
-                <input id="name" name="Name" placeholder="First name" required="" tabindex="1" type="text">
-				<p class="contact"><label for="name">Surname</label></p>
-
-                <input id="Surname" name="Surname" placeholder="Last name" required="" tabindex="1" type="text">
-
- 
-
-                <p class="contact"><label for="email">Email</label></p>
-
-                <input id="email" name="email" placeholder="example@domain.com" required="" type="email">
-
- 
-
-                <p class="contact"><label for="password">Password</label></p>
-
-                <input type="password" id="password" name="password" required="" type="text">
-				
-				
-				<p class="contact"><label for="birthday">Date of birth</label></p>
-
-                <input type="birthday" id="birthday" placeholder="dd/mm/yyyy" name="birthday" required="" type="text">
-
-
-               
-
-            <p>Gender:</p>
-			<p><select class="select-style gender" name="gender">
-
-            <option value="select">i am..</option>
-
+            <p><option value="select">I am..</option>
             <option value="m">Male</option>
             <option value="f">Female</option></p>
+		
+			</body>
+       
 </form>
-		</form>
-		<p>Please select each off your interest: </p>
-		    <input type="checkbox" name="item_Spor" value="spor">SPOR 
-		    <input type="checkbox" name="item_Chocalate"value="Chocalate">CHOCALATE 
-		    <input type="checkbox" name="item_etc"value="etc">ETC 
-			   <p> <button type="submit" value="Submit"img src="C:\Users\hp\Desktop\WEBSITESI\tik1.png" width="400px">Submit</button></p>
-				<p><button type="reset" value="Reset!"> Reset</button>  </p>
-			
+
+
+<script>
+function formControl2(){
+    
+
+    var age2=document.getElementById("age2");
+    var emailaddress=document.getElementById("emailaddress");
+    var password=document.getElementById("password");
+
+    var message1="",message2="",message3="";
+
+    if(age2.validity.rangeOverflow){
+        message1="[10-40] please enter between this age";
+
+    }else if(age2.validity.rangeUnderflow){
+        mesaj1="[10-40] please enter between this age";
+
+    }else if(age.validity.valueMissing){
+        
+        message1="you must enter your age";
+    }else{
+
+    }
+
+
+
+  
+    if(emailaddress.validity.typeMismatch){
+        messsage2="this is not an email address";
+    }else if(emailadresi.validity.valueMissing){
+        messsage2="we need to this knowledge";
+    }
+
+
+    if(password.validity.valueMissing){
+        message3="you should your password";
+    }else if(password.validity.patternMismatch){
+        
+        message3="this is not same this rule";
+    }else{
+
+    }
+
+
+    age.setCustomValidity(message1);
+    emailadresi.setCustomValidity(message2);
+    password.setCustomValidity(message3);
+
+
+}
+
+</script>
 		 
 		 
-		 
-		 </body>
+	
+		
+</p>
+ 
+
+
+
+ 
+	
+		 </head>
 		 </html>
